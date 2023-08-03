@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rubik !important;
+}
+h4 {
+  font-weight: 700 !important;
+}
+h5 {
+  font-weight: 600 !important;
+}
+h6 {
+  font-weight: 600 !important;
+  color: #969696;
+  font-size: 14px !important;
+}
+input {
+  font-weight: 600 !important;
+}
