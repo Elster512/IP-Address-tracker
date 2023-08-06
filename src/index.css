@@ -3,7 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: Rubik !important;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 h4 {
   font-weight: 700 !important;
