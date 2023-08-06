@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import axios from "axios";
+import { ipReducer } from "./reducers/ipSlice";
 
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    ip: ipReducer,
+  },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       thunk: {
@@ -16,5 +19,5 @@ const store = configureStore({
 
 export default store;
 
-export type AppDispatch = ReturnType<typeof store.dispatch>;
-export type RootState = typeof store.getState;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

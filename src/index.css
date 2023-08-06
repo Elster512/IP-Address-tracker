@@ -3,12 +3,14 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: Rubik !important;
+  overflow-y: hidden;
 }
 h4 {
   font-weight: 700 !important;
 }
 h5 {
   font-weight: 600 !important;
+  font-size: 26px !important;
 }
 h6 {
   font-weight: 600 !important;
