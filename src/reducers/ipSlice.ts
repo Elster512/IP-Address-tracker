@@ -9,7 +9,6 @@ type IpSlice = {
 };
 const initialState: IpSlice = {
   status: {
-    code: "",
     message: "",
   },
   ipData: {
@@ -36,15 +35,14 @@ const ipSlice = createSlice({
         state.ipData = action.payload.data;
       })
       .addCase(loadNewIpData.fulfilled, (state, action) => {
+        console.log(action.payload);
         state.ipData = action.payload.data;
         state.status = {
-          code: "",
           message: "",
         };
       })
       .addCase(loadNewIpData.rejected, (state, action) => {
-        if (action.error.code && action.error.message) {
-          state.status.code = action.error.code;
+        if (action.error.message) {
           state.status.message = action.error.message;
         }
       });

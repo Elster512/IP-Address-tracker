@@ -2,6 +2,7 @@ import { Container, Box } from "@mui/material";
 import "./App.css";
 import SearchField from "./Components/SearchField";
 import Description from "./Components/Description";
+import Map from "./Components/Map";
 import imageDesk from "./assets/pattern-bg-desktop.png";
 import imageMobl from "./assets/pattern-bg-mobile.png";
 const App = () => {
@@ -24,15 +25,18 @@ const App = () => {
         }}
       ></Box>
       <Box
+        id="map"
+        component={"div"}
         sx={{
-          position: "fixed",
+          position: "absolute",
           top: { md: "275px", xs: "350px" },
           width: "100%",
           zIndex: "-1",
           height: "100%",
-          backgroundColor: "red",
         }}
-      ></Box>
+      >
+        <Map />
+      </Box>
       <Container>
         <SearchField />
         <Description />

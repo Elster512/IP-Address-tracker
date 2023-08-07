@@ -1,1 +1,1 @@
-export const regExpIP = /\d{3}\\.\d{3}\\.\d{3}\\.\d{3}/;
+export const regExpIP = /\d{1,3}\\.\d{1,3}\\.\d{1,3}\\.\d{1,3}/;

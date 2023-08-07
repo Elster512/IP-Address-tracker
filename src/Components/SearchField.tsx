@@ -11,7 +11,7 @@ type formFields = {
 const SearchField = () => {
   const dispatch = useAppDispatch();
   const status = useSelector(selectIpData);
-
+  console.log(status.status.message);
   const handleSubmit: React.FormEventHandler<HTMLFormElement | formFields> = (
     event
   ) => {
