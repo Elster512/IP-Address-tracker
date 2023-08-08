@@ -10,33 +10,38 @@ const App = () => {
     <>
       <Box
         sx={{
-          height: { md: "275px", xs: "350px" },
           position: "absolute",
+          height: "100vh",
           width: "100%",
           zIndex: "-1",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-
-          backgroundImage: {
-            md: `url(${imageDesk})`,
-            xs: `url(${imageMobl})`,
-          },
-        }}
-      ></Box>
-      <Box
-        id="map"
-        component={"div"}
-        sx={{
-          position: "absolute",
-          top: { md: "275px", xs: "350px" },
-          width: "100%",
-          zIndex: "-1",
-          height: "100%",
         }}
       >
-        <Map />
+        <Box
+          sx={{
+            height: { md: "275px", xs: "300px" },
+            width: "100%",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+
+            backgroundImage: {
+              md: `url(${imageDesk})`,
+              xs: `url(${imageMobl})`,
+            },
+          }}
+        ></Box>
+        <Box
+          id="map"
+          component={"div"}
+          sx={{
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <Map />
+        </Box>
       </Box>
+
       <Container>
         <SearchField />
         <Description />
